@@ -360,7 +360,7 @@ if(enq)enq.addEventListener("submit",e=>{
 // ---- Home banner slider ----
 const SLIDES=[
   {d:"images/home-page-laptop.png",m:"images/home-page-mobile.png",alt:"Rishi Ratna Ayurved banner"},
-  {d:"images/gopt-roag-kit-laptop.jpeg",m:"images/risho-liv-syrup.jpeg",alt:"Risho-Liv Syrup",href:"product/risho-liv-syrup.html",fix:true,l:"#000000",r:"#F6EDC8"},
+  {d:"images/gopt-roag-kit-laptop.jpeg",m:"images/gopt-roag-kit-mobile.png",alt:"Gupt Roag Kit",href:"products.html",fix:true,l:"#000000",r:"#F6EDC8"},
   {d:"images/joint-pain-kit-laptop.jpeg",m:"images/joint-pain-kit-mobile.png",alt:"Ortho Rish Syrup",href:"product/ortho-rish-syrup.html",fix:true,l:"#000000",r:"#F4F1EA"},
   {d:"images/piles-kit-laptop.jpeg",m:"images/piles-kit-mobile.png",alt:"Femorish Syrup",href:"product/femorish-syrup.html",fix:true,l:"#000000",r:"#FAF7F0"}
 ];
