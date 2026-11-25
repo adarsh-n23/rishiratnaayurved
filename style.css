@@ -1699,8 +1699,18 @@ h2::after{background:linear-gradient(90deg,var(--brand-gold),rgba(217,180,91,0))
   #grid-all .card .body{padding:16px 14px;gap:7px}
   #grid-all .card h3{font-size:1.12rem}
   #grid-all .card p{font-size:.86rem}
-  #grid-all .card-actions{gap:7px}
-  #grid-all .card-actions .btn{flex-basis:100%;padding:8px 9px;font-size:.82rem}
+  #grid-all .card-actions{display:grid;grid-template-columns:1fr;gap:8px}
+  #grid-all .card-actions .btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:44px;
+    padding:10px 9px;
+    font-size:.82rem;
+    line-height:1.25;
+    text-align:center;
+  }
 }
 @media(max-width:380px){
   #grid-all .card{grid-template-columns:minmax(96px,.68fr) minmax(0,1.32fr)}
@@ -1714,3 +1724,44 @@ h2::after{background:linear-gradient(90deg,var(--brand-gold),rgba(217,180,91,0))
 }
 .card .pic,.pd-pic,.product-detail-image{background:#050705}
 .pd-pic,.product-detail-image{border-radius:18px}
+
+.home-premium .hero-grid{grid-template-columns:minmax(0,1fr);gap:0}
+.home-premium .hero-copy{max-width:none;width:100%}
+.home-premium .hero-heading-row{width:100%}
+.home-premium .hero-tagline-row{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);
+  gap:clamp(28px,6vw,90px);
+  align-items:center;
+  width:100%;
+}
+.home-premium .hero-tagline-row .hero-hi{grid-column:1;grid-row:1;order:0;align-self:center}
+.home-premium .hero-tagline-row .hero-visual{grid-column:2;grid-row:1;order:0}
+.home-premium .hero-visual{margin:0}
+.home-premium .hero-logo-wrap{
+  grid-column:auto;
+  grid-row:auto;
+  justify-self:center;
+  align-self:center;
+  margin:0;
+}
+
+@media(max-width:760px){
+  .home-premium .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .home-premium .hero-copy{align-items:stretch}
+  .home-premium .hero-heading-row h1{font-size:clamp(1.55rem,8vw,2.4rem);line-height:1.04;margin-bottom:12px}
+  .home-premium .hero-tagline-row{grid-template-columns:minmax(0,1fr) minmax(110px,.72fr);gap:14px}
+  .home-premium .hero-tagline-row .hero-hi{font-size:clamp(.94rem,4.2vw,1.15rem);line-height:1.5;margin:12px 0}
+  .home-premium .hero-visual{grid-row:auto;align-self:center;gap:8px}
+  .home-premium .hero-logo-wrap{width:clamp(108px,34vw,190px)}
+  .home-premium .hero-visual-caption{font-size:.72rem;letter-spacing:.06em}
+  .home-premium .hero-visual-caption small{font-size:.53rem}
+  .home-premium .hero-copy .hero-badge{align-self:center;margin-bottom:16px}
+  .home-premium .hero-copy .hero-eyebrow{text-align:center}
+}
+
+@media(max-width:360px){
+  .home-premium .hero-tagline-row{grid-template-columns:minmax(0,1fr) minmax(96px,.68fr);gap:10px}
+  .home-premium .hero-heading-row h1{font-size:1.55rem}
+  .home-premium .hero-logo-wrap{width:clamp(96px,32vw,128px)}
+}
